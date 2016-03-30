@@ -23,13 +23,21 @@ $(document).ready(function(){
 }
     $('#headerLocation').click(function() {
         $('#locationWeather').toggle();
-        $('#headerLocation').not(this).css('background-image', 'url(/MDDN352-Project1/images/locationIcon.png)').removeClass('playing');
+        $('#headerLocation').not(this).css('background-image', 'url(/images/locationIcon.png)').removeClass('playing');
         if(!$(this).is('.playing')){
-            $(this).css('background-image', 'url(/MDDN352-Project1/images/closeIcon.png)').addClass('playing');
+            $(this).css('background-image', 'url(/images/closeIcon.png)').addClass('playing');
     } else {
-           $(this).css('background-image', 'url(/MDDN352-Project1/images/locationIcon.png)').removeClass('playing');
+           $(this).css('background-image', 'url(/images/locationIcon.png)').removeClass('playing');
     }
 
+});
+    
+    $(window).scroll(function() {
+   $('#headerBanner').show();
+
+   if ($(window).scrollTop() <= 0) {
+      $('#headerBanner').hide(); 
+   }
 });
     
     var now = new Date();
