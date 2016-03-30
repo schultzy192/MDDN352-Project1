@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<!-- Stefan Schultz, 2016, MDDN 352 Project 1 - Whether?
+     Currently, the weather data is static and fake, due to my inability to get a weather API functioning at this time. However, the geolocation works properly, and converts your current location to a city and country. -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Whether? - Stefan Schultz, MDDN 352</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/touch-icon.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" media="(max-width: 800px)" type="text/css"
+    href="/css/mobile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/javascript/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script id="weatherAPI"></script>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+
+</head>
+
+    <body>
+        <div id="pageContent"></div>        
+        <div id="heroContainer">
+            <div id="heroLogo"></div>
+            <h2 id="heroCaption">Weather, just for you and your life.</h2>
+            <div id="heroImage"></div>
+            <div id="heroPhone"></div>
+            <div id="headerBanner">
+                <div id="headerLogo"></div>
+                <div id="headerLocation"></div>
+                <div id="locationWeather" hidden>
+                    <h4 class="locWeatherHeading"></h4>
+                    <h5 class="locCaption"></h5>
+                    <p>(based on your geolocation data)</p>
+                    <h2 class="temp">9&deg;</h2>
+                    <h3 class="conditions">Light showers right now.</h3>
+                    <img id="weatherIcon" src="/images/showers-01.png">
+                    <div id="locLine"></div>
+                </div>
+                <h5 id="headerCaption">Weather. Just for you and your life.</h5>
+            </div>
+        </div>
+        
+        <div id="yourWeatherContainer">
+            <img id="yourDayImage" src="images/iPhoneRightNow.png">
+            <h3 class="sectionHeading">It's your weather, and your life.</h3>
+            <p class="bodyCopy">We live in the age of personalised, relevant and targeted media, where our lives are connected and linked through technology. Whether connects to your life and gives you timely, relevant and personal weather data, helping you plan and decide in advance, and never be surprised by the weather again.</p>
+        </div>
+        
+        <div id="dataContainer">
+            <img id="dataImage" src="/images/iPhoneDetail.png">
+            <h3 class="sectionHeading">Detailed data, science and all.</h3>
+            <p class="bodyCopy">Whether has access to a massive database of incredibly detailed and up to date scientific data, so when you need more information on a particular time of day, your just a tap away from rain radars, satellite imagery, surface pressure maps, and more.</p>
+        </div>
+        
+        <div id="notifyContainer">
+            <div id="notifyImage"></div>
+            <h3 class="sectionHeading">Start the day right.</h3>
+            <p class="bodyCopy">Get a morning notification about the day's conditions, ready when you are, then open up to a breakdown of your day.</p>
+            <p class="subCopy">Plus get customisable notifications as conditions change and affect your schedule, throughout the day. Set times, severity levels and even specific locations.</p>
+        </div>
+        
+        <div id="slideshowContainer">
+            <div id="slideshowBG"></div>
+            <div class="sectionHeading">Everything you need to know, when you need to know it.</div>
+            <div id="scrollContain">
+                <div id="overviewScroll"></div>
+            </div>
+            <img id="scrollMore" src="/images/scrollMore.svg">
+        </div>
+        
+        <button onclick="notifyMe()">Notify me!</button>
+        
+        <div id="devicesContainer">
+            <img id="devicesImage" src="/images/iPhone&AppleWatch.png">
+            <h3 class="sectionHeading">Your weather on your devices.</h3>
+            <p class="bodyCopy">Whether is designed as a cross platform experience, with the ultimate goal of providing apps across all major mobile, wearable, and desktop/web platforms, allowing consistent, easy to access to the best weather information from any device.</p>
+        </div>
+        
+        <div id="watchContainer">
+            <img id="watchImage" src="/images/iPhone&AppleWatch.png">
+            <h3 class="sectionHeading">Keep a watchful eye on things.</h3>
+            <p class="bodyCopy">The native Apple Watch app offers you a quick, easy to view subset of the information on your location and schedule, helping you stay prepared for anything.</p>
+            <p class="subCopy">Plus, get all your notifications and alerts directly on your wrist. It's the fastest and simplest way to keep yourself abreast of what you need you know.</p>
+        </div>
+        </div>
+        
+        <div class="footer">
+            <div id="footerBG">
+            <img id="footerLogo" src="/images/mainLogo-white.png">
+            <h4 id="footerh4">Whether? - Stefan Schultz, 2016</h4>
+            <h5 id="footerh5">MDDN 352, Project 1, Victoria University of Wellington School of Design</h5>
+        </div>
+        </div>
+        
+    </body>
+    
+</html>

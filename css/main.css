@@ -1,0 +1,561 @@
+/*  Stefan Schultz, MDDN 352 Project 1, March 2016
+    Primary CSS. */
+
+/* COLOR PALETTE
+    Whether Blue = #36B3FF
+    Body Text Gray = #233343
+    Mid Gray Accent = #5E8293
+    Light Blue Accent = #F4FCFF
+    Light Body Gray = #D6DEDE
+*/
+
+/* FONT STYLING
+    Family = Source Sans Pro
+    Fallback = sans-serif
+    Main Headings = Extra Light, 100 weight
+    Sub headings = 100 weight
+    Large body text = 300 weight
+    Small copy = 400 weight
+    Smallest detail callouts = 600 weight
+*/
+
+/* PRIMARY STYLING - PERSISTENT & DESKTOP FIRST */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+#heroContainer {
+    margin -0.6em auto;
+    margin-top: -0.6em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 45em;
+    z-index: 10;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+#heroImage {
+    position: absolute;
+    background-image: url(/images/sunsetHero.jpg);
+    left: 0;
+    right: 0;
+    height: 45em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 6;
+}
+
+#heroLogo {
+    position: absolute;
+    z-index: 7;
+    background-image: url(/images/mainLogo-white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 12em;
+    margin-top: 16em;
+    left: 10%;
+    right: 50%;
+}
+
+#heroCaption {
+    position: absolute;
+    z-index:7;
+    left: 10%;
+    right: 50%;
+    margin-top: 13em;
+    text-align: center;
+    font-weight: 100;
+    font-size: 24pt;
+    color: white;
+}
+
+#heroPhone {
+    position: absolute;
+    z-index: 7;
+    height: 42em;
+    width: 22em;
+    background-image: url(/images/heroPhone.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 55%;
+    margin-top: 4em;
+    overflow: hidden;
+}
+
+#headerBanner {
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 3em;
+    background-color: #36B3FF;
+    position: fixed;
+    z-index: 5;
+}
+
+#headerCaption {
+    display: block;
+    margin-right: 4em;
+    text-align: right;
+    font-weight: 300;
+    font-size: 14pt;
+    margin-top: 0.7em;
+    color: white;
+}
+
+#headerLocation {
+    position: absolute;
+    background-image: url(/images/locationIcon.png);
+    background-color: #36B3FF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2em;
+    height: 2em;
+    right: 1em;
+    margin-top: 0.5em;
+    transition: fade 0.5s;
+}
+
+#locationWeather {
+    position: absolute;
+    background-color: #F4FCFF;
+    width: 40%;
+    height: 10em;
+    right: 0;
+    margin-top: 3em;
+}
+
+.locWeatherHeading {
+    color: #36B3FF;
+    font-weight: 300;
+    font-size: 18pt;
+    text-align: left;
+    width: 100%;
+    margin-left: 5em;
+    margin-top: 0.5em;
+}
+
+.locCaption {
+    color: #36B3FF;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    margin-left: 9em;
+    margin-top: -2em;
+}
+
+#locationWeather > p {
+    color: #36B3FF;
+    font-style: italic;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.3pt;
+    width: 100%;
+    margin-left: 11.2em;
+    margin-top: -1.8em;
+}
+
+.temp {
+    color: #36B3FF;
+    font-weight: 100;
+    font-size: 42pt;
+    margin-left: 2.2em;
+    margin-top: -0.2em;
+}
+
+.conditions {
+    position: absolute;
+    width: 100%;
+    margin-left: 10em;
+    font-weight: 300;
+    color: #36B3FF;
+    margin-top: -5em;
+}
+
+#weatherIcon {
+    position: absolute;
+    width: 5em;
+    margin-top: -10em;
+    margin-left: 1.3em;
+}
+
+#locLine {
+    margin-top: -2.5em;
+    width: 100%;
+    height: 0.5em;
+    background-color: #36B3FF;
+}
+
+#headerLogo {
+    position: absolute;
+    background-image: url(/images/mainLogo-white.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2em;
+    height: 3em;
+    width: 8em;
+}
+
+#yourWeatherContainer {
+    margin-top: 8em;
+    margin: -0.6 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40em;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#yourDayImage {
+    position: absolute;
+    height: 35em;
+    right: 65%;
+}
+
+#yourWeatherContainer > h3 {
+    position: absolute;
+    left: 40%;
+    margin-top: 4.5em;
+}
+
+#yourWeatherContainer > p {
+    position: absolute;
+    left: 40%;
+    margin-top: 10em;
+    width: 25em;
+}
+
+.sectionHeading {
+    font-weight:200;
+    color: #36B3FF;
+    font-size: 24pt;
+    letter-spacing: -0.02em;
+}
+
+.bodyCopy {
+    color: #233343;
+    font-weight: 300;
+    font-size: 14pt;
+}
+
+#dataContainer {
+    margin-top: -5em;
+    margin: -0.6 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40em;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#dataImage {
+    position: absolute;
+    height: 35em;
+    left: 60%;
+}
+
+#dataContainer > h3 {
+    position: absolute;
+    right: 45%;
+    margin-top: 3.5em;
+    text-align: right;
+}
+
+#dataContainer > p {
+    position: absolute;
+    right: 45%;
+    width: 25em;
+    margin-top: 8em;
+    text-align: right;
+}
+
+#notifyContainer {
+    margin: -0.6 auto;
+    left: 0;
+    right: 0; 
+    width: 100%;
+    height: 40em;
+    z-index: 1;
+}
+
+#notifyImage {
+    position: absolute;
+    background-image: url(/images/morning_Notify.jpeg);
+    height: 40em;
+    background-position: center;
+    background-size: cover;
+    left:0;
+    right:0;
+    width: 100%;
+}
+
+#notifyContainer > h3 {
+    position: absolute;
+    color: white;
+    text-align: right;
+    right: 55%;
+    left:10%;
+    margin-top: 12em;
+}
+
+#notifyContainer > p {
+    position: absolute;
+    color: #D6DEDE;
+    right: 55%;
+    text-align: right;
+    width: 18em;
+    margin-top: 23em;
+}
+
+.subCopy {
+    font-size: 10pt;
+}
+
+#notifyContainer > .subCopy {
+    margin-top: 39em;
+    width: 25em;
+}
+
+#slideshowContainer {
+    margin: -0.6 auto;
+    margin-top: 0em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60em;
+    z-index: 1;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+#slideshowBG {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #F4FCFF;
+    height: 60em;
+}
+
+#slideshowContainer > .sectionHeading {
+    position: absolute;
+    text-align: center;
+    left:25%;
+    right: 25%;
+    margin-top: 1.5em;
+    z-index: 1;
+}
+
+#scrollMore {
+    position: absolute;
+    width: 8em;
+    height: 3em;
+    margin-top: 8em;
+    left: 0;
+    right: 0;
+    margin-left: calc(50% - 4em);
+    transition: 0.2s;
+    z-index: 2;
+}
+
+#scrollMore:hover {
+    transform: scale(1.1);
+}
+
+#scrollContain {
+    position: absolute;
+    width: 99%;
+    height: 40em;
+    overflow: scroll;
+    margin-top: 11em;
+}
+
+#overviewScroll {
+    position: absolute;
+    background-image: url(/images/overviewScroller.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 222em;
+    height: 40em;
+}
+
+#watchContainer {
+    margin: -0.6 auto;
+    margin-top: 4em;
+    left: 0;
+    right:0;
+    width: 100%;
+    height: 40em;
+    z-index: 1;
+}
+
+#watchImage {
+    position: absolute;
+    height: 30em;
+    right: 55%;
+}
+
+#watchContainer > h3 {
+    position: absolute;
+    left: 45%;
+    margin-top: 2.8em;
+}
+
+#watchContainer > p {
+    position: absolute;
+    left: 45%;
+    margin-top: 7em; 
+    width: 25em;
+}
+
+#watchContainer > .subCopy {
+    left: 47%;
+    margin-top: 25em;
+    width: 30em;
+    color: #233343;
+}
+
+.footer {
+    margin: -0.6 auto;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 6em;
+    overflow: hidden;
+}
+
+#footerBG {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 6em;
+    padding-bottom: 1.5rem;
+    background-color: #36B3FF
+}
+
+#footerLogo {
+    position: absolute;
+    width: 20em;
+    margin-top: -0.2em;
+    right: 60%;
+}
+
+#footerh4 {
+    position: absolute;
+    color: white;
+    left: 40%;
+    text-align: left;
+    margin-top: 2.6em;
+}
+
+#footerh5 {
+    position: absolute;
+    color: white;
+    left: 40%;
+    text-align: left;
+    font-weight: 600;
+    margin-top: 4.5em;
+}
+
+/* MOBILE & TABLET SPECIFIC STYLING */
+
+/*@media all and (max-width: 800px) {
+    
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    #heroImage {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    
+    #heroPhone {
+        margin-top: 10em;
+        height: 30em;
+        left: 0;
+        right: 0;
+        margin-left: 50%;
+    }
+    
+    #heroLogo {
+        left: 0;
+        right: 0;
+        margin-left: 50%;
+    }
+    
+    #heroCaption {
+        width: 75%;
+    }
+    
+    #headerCaption {
+        left:0;
+        right: 0;
+        display:none;
+    }
+    
+    #headerLogo {
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .sectionHeading {
+        width: 75%;
+        text-align: left;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+    }
+    
+    #yourDayImage {
+        left: 0;
+        right: 0;
+        margin-left: 50%;
+        margin-top: -1em;
+    }
+    
+    #yourWeatherContainer > h3 {
+        margin-top: 10em;
+    }
+    
+    #yourWeatherContainer > .bodyCopy {
+        margin-top: 25em;
+    }
+    
+    #dataImage {
+        left:0;
+        right:0;
+        margin-left: 50%;
+    }
+    
+    #notifyImage {
+        width: 100%;
+        left: 0;
+        right:0;
+    }
+    
+    #watchImage {
+        left: 0;
+        right:0;
+        margin-left: 50%;
+    }
+}*/
