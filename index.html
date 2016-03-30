@@ -16,23 +16,16 @@
     <link rel="stylesheet" media="(max-width: 800px)" type="text/css"
     href="/css/mobile.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/slick/slick.min.js"></script>
     <script type="text/javascript" src="/javascript/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script id="weatherAPI"></script>
-
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
-    
-    <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
 
 </head>
 
     <body>
-        <div id="pageContent"></div>        
+        <div id="overflowKill">
+        <div id="pageContent">       
         <div id="heroContainer">
             <div id="heroLogo"></div>
             <h2 id="heroCaption">Weather, just for you and your life.</h2>
@@ -55,13 +48,13 @@
         </div>
         
         <div id="yourWeatherContainer">
-            <img id="yourDayImage" src="images/iPhoneRightNow.png">
+            <img id="rightNowImage" src="/images/rightNow.png">
             <h3 class="sectionHeading">It's your weather, and your life.</h3>
             <p class="bodyCopy">We live in the age of personalised, relevant and targeted media, where our lives are connected and linked through technology. Whether connects to your life and gives you timely, relevant and personal weather data, helping you plan and decide in advance, and never be surprised by the weather again.</p>
         </div>
         
         <div id="dataContainer">
-            <img id="dataImage" src="/images/iPhoneDetail.png">
+            <img id="dataImage" src="/images/yourDay.png">
             <h3 class="sectionHeading">Detailed data, science and all.</h3>
             <p class="bodyCopy">Whether has access to a massive database of incredibly detailed and up to date scientific data, so when you need more information on a particular time of day, your just a tap away from rain radars, satellite imagery, surface pressure maps, and more.</p>
         </div>
@@ -78,16 +71,25 @@
             <div class="sectionHeading">Everything you need to know, when you need to know it.</div>
             <div id="scrollContain">
                 <div id="overviewScroll"></div>
+                <p id="scrollA" class=".bodyCopy">Whether opens to a view of the current conditions for your location, plus the next event on your schedule, with the option to drill down to more detailed information relevant to it.</p>
+                <p id="scrollB" class=".bodyCopy">The Your Day tab shows you an overview of your schedule for the whole day, with the current forecasted weather conditions, and advice about the event. Each one can be opened to more specific information.</p>
+                <p id="scrollC" class=".bodyCopy">Open up a scheduled event for a detailed look at the conditions. In this example, a rain radar overlaps a walking route to work, helping you decide whether or not to walk.</p>
+                <p id="scrollD" class=".bodyCopy">If you decide not to walk, Whether also offers context specific links - here to request an Uber, view bus timetables through Metlink, or provide a list of local taxi services to call for.</p>
+                <p id="scrollE" class=".bodyCopy">And naturally you can view forecasts for the entire country, broken down by major centres, but with the ability to view broader weather maps and predictions. The daily overview video for the entire country is available too.</p>
             </div>
-            <img id="scrollMore" src="/images/scrollMore.svg">
+            <h4 id="scrollMore">&lt; SCROLL FOR MORE &gt;</SCROLL></h4>
         </div>
         
-        <button onclick="notifyMe()">Notify me!</button>
-        
         <div id="devicesContainer">
-            <img id="devicesImage" src="/images/iPhone&AppleWatch.png">
+            <img id="devicesImage" src="/images/whetherDevices.png">
             <h3 class="sectionHeading">Your weather on your devices.</h3>
             <p class="bodyCopy">Whether is designed as a cross platform experience, with the ultimate goal of providing apps across all major mobile, wearable, and desktop/web platforms, allowing consistent, easy to access to the best weather information from any device.</p>
+        </div>
+        
+        <div id="philosophyContainer">
+            <h3 class="sectionHeading">Designed for you.</h3>
+            <p class="bodyCopy">Whether is designed with one guiding principle in mind: you. Personalised, relevant and immediate information, accessible wherever you are, is the next challenge to be met by technology, all while respecting the user's privacy and security. Achieving engagement and standing out from the crowd can only happen with this dedicated philosophy, putting the user before other considerations.</p>
+            <p class="subCopy">Privacy is a core consideration with Whether. Users have total control over the information they provide, what services they tie in, and if they share their location.</p>
         </div>
         
         <div id="watchContainer">
@@ -105,7 +107,7 @@
             <h5 id="footerh5">MDDN 352, Project 1, Victoria University of Wellington School of Design</h5>
         </div>
         </div>
-        
+        </div>
     </body>
     
 </html>

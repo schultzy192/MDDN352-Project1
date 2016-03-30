@@ -23,15 +23,20 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 html {
     overflow-x: hidden;
 }
 
+#overflowKill {
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
 #heroContainer {
-    margin -0.6em auto;
+    margin: -0.6em auto;
     margin-top: -0.6em;
     left: 0;
     right: 0;
@@ -131,7 +136,7 @@ html {
 #locationWeather {
     position: absolute;
     background-color: #F4FCFF;
-    width: 40%;
+    width: 50%;
     height: 10em;
     right: 0;
     margin-top: 3em;
@@ -220,10 +225,10 @@ html {
     z-index: 1;
 }
 
-#yourDayImage {
+#rightNowImage {
     position: absolute;
     height: 35em;
-    right: 65%;
+    right: 62%;
 }
 
 #yourWeatherContainer > h3 {
@@ -266,13 +271,13 @@ html {
 #dataImage {
     position: absolute;
     height: 35em;
-    left: 60%;
+    left: 57%;
 }
 
 #dataContainer > h3 {
     position: absolute;
     right: 45%;
-    margin-top: 3.5em;
+    margin-top: 6em;
     text-align: right;
 }
 
@@ -280,7 +285,7 @@ html {
     position: absolute;
     right: 45%;
     width: 25em;
-    margin-top: 8em;
+    margin-top: 12.5em;
     text-align: right;
 }
 
@@ -337,7 +342,7 @@ html {
     left: 0;
     right: 0;
     width: 100%;
-    height: 60em;
+    height: 58em;
     z-index: 1;
     overflow-y: hidden;
     overflow-x: auto;
@@ -348,7 +353,7 @@ html {
     left: 0;
     right: 0;
     background-color: #F4FCFF;
-    height: 60em;
+    height: 58em;
 }
 
 #slideshowContainer > .sectionHeading {
@@ -362,12 +367,12 @@ html {
 
 #scrollMore {
     position: absolute;
-    width: 8em;
-    height: 3em;
-    margin-top: 8em;
+    margin-top: 10em;
     left: 0;
     right: 0;
-    margin-left: calc(50% - 4em);
+    text-align: center;
+    font-size: 11pt;
+    color: #5E8293;
     transition: 0.2s;
     z-index: 2;
 }
@@ -378,10 +383,50 @@ html {
 
 #scrollContain {
     position: absolute;
-    width: 99%;
-    height: 40em;
+    width: 98%;
+    height: 45em;
     overflow: scroll;
     margin-top: 11em;
+}
+
+#scrollA {
+    position: absolute;
+    width: 23em;
+    text-align: center;
+    margin-top: 39em;
+    left: 15.8em;
+}
+
+#scrollB {
+    position: absolute;
+    width: 25em;
+    text-align: center;
+    margin-top: 39em;
+    left: 53.5em;
+}
+
+#scrollC {
+    position: absolute;
+    width: 25em;
+    text-align: center;
+    margin-top: 39em;
+    left: 92.5em;
+}
+
+#scrollD {
+    position: absolute;
+    width: 25em;
+    text-align: center;
+    margin-top: 39em;
+    left: 131em;
+}
+
+#scrollE {
+    position: absolute;
+    width: 25em;
+    text-align: center;
+    margin-top: 39em;
+    left: 171.5em;
 }
 
 #overviewScroll {
@@ -389,8 +434,63 @@ html {
     background-image: url(/images/overviewScroller.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 222em;
+    width: 212em;
     height: 40em;
+}
+
+#devicesContainer {
+    height: 38em;
+}
+
+#devicesImage {
+    margin-top: 3em;
+    height: 25em;
+    left: 0;
+    right: 0;
+    margin-left: calc(50% - 20em);
+}
+
+#devicesContainer > h3 {
+    text-align: center;
+    margin-top: 0em;
+}
+
+#devicesContainer > p {
+    text-align: center;
+    width: 75%;
+    left: 0;
+    right: 0;
+    margin-left: calc(50% - 37.5%);
+    margin-top: -1.5em;
+}
+
+#philosophyContainer {
+    height: 30em;
+    width: 60%;
+    right: 0;
+    left: 0;
+    margin-left: calc(50% - 30%);
+}
+
+#philosophyContainer > h3 {
+    position: absolute;
+    margin-top: 3em;
+    text-align: left;
+
+}
+
+#philosophyContainer > .bodyCopy {
+    position: absolute;
+    text-align: left;
+    width: 60%;
+    margin-top: 7.5em;
+}
+
+#philosophyContainer > .subCopy {
+    position: absolute;
+    text-align: left;
+    width: 40%;
+    margin-top: 24em;
 }
 
 #watchContainer {
@@ -471,91 +571,3 @@ html {
     font-weight: 600;
     margin-top: 4.5em;
 }
-
-/* MOBILE & TABLET SPECIFIC STYLING */
-
-/*@media all and (max-width: 800px) {
-    
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-    
-    #heroImage {
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
-    
-    #heroPhone {
-        margin-top: 10em;
-        height: 30em;
-        left: 0;
-        right: 0;
-        margin-left: 50%;
-    }
-    
-    #heroLogo {
-        left: 0;
-        right: 0;
-        margin-left: 50%;
-    }
-    
-    #heroCaption {
-        width: 75%;
-    }
-    
-    #headerCaption {
-        left:0;
-        right: 0;
-        display:none;
-    }
-    
-    #headerLogo {
-        left: 0;
-        right: 0;
-        margin-left: 0;
-        width: 100%;
-    }
-    
-    .sectionHeading {
-        width: 75%;
-        text-align: left;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-    }
-    
-    #yourDayImage {
-        left: 0;
-        right: 0;
-        margin-left: 50%;
-        margin-top: -1em;
-    }
-    
-    #yourWeatherContainer > h3 {
-        margin-top: 10em;
-    }
-    
-    #yourWeatherContainer > .bodyCopy {
-        margin-top: 25em;
-    }
-    
-    #dataImage {
-        left:0;
-        right:0;
-        margin-left: 50%;
-    }
-    
-    #notifyImage {
-        width: 100%;
-        left: 0;
-        right:0;
-    }
-    
-    #watchImage {
-        left: 0;
-        right:0;
-        margin-left: 50%;
-    }
-}*/

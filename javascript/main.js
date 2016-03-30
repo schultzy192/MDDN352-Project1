@@ -13,7 +13,7 @@ $(document).ready(function(){
         for (var location of locations) {
           if ($.inArray('locality', location.types) != -1) {
             console.log('Your location is: ' + location.formatted_address);
-              $('.locCaption').text('You appear to be in ' + location.formatted_address); $.getScript(src = 'https://api.forecast.io/forecast/0ecea812cd02e54bab9ff5cccbb33cdf/'+ latit+','+ longit);
+              $('.locCaption').text('You appear to be in ' + location.formatted_address); 
             break;
           }
         };
@@ -40,30 +40,7 @@ $(document).ready(function(){
       else msg = "Good Evening!";
       $('.locWeatherHeading').text(msg);
     
-    function notifyMe() {
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    alert("This browser does not support desktop notification");
-  }
+    var docWidth = document.documentElement.offsetWidth;
 
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        var notification = new Notification("Hi there!");
-      }
-    });
-  }
-
-  // At last, if the user has denied notifications, and you 
-  // want to be respectful there is no need to bother them any more.
-}
 });
 
